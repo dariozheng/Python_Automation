@@ -12,7 +12,7 @@ dateRegex = re.compile(r'''(
     (\d{4})
     )''', re.VERBOSE)
 
-def check(day, month, year):
+def check(day, month, year, groups):
     month = int(month)
     day = int(day)
     year = int(year)
@@ -34,7 +34,7 @@ matches = []
 
 for groups in dateRegex.findall(text):
     month, day, year = groups[2], groups[1], groups[3]
-    check(day, month, year)
+    check(day, month, year, groups)
 
 if len(matches) > 0:
     pyperclip.copy('\n'.join(matches))
