@@ -1,5 +1,5 @@
 #! python3
-# PhoneAndEmail.py - Finds phone numbers and email addresses on the clipboard.
+# Regex_PhoneAndEmail.py - Finds phone numbers and email addresses on the clipboard.
 import pyperclip, re
 
 phoneRegex = re.compile(r'''(
