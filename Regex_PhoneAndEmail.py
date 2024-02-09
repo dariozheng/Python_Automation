@@ -20,10 +20,8 @@ emailRegex = re.compile(r'''(
     )''', re.VERBOSE)
 
 text = pyperclip.paste()
-print(emailRegex)
 matches = []
 for groups in phoneRegex.findall(text):
-    print(groups)
     phoneNum = '-'.join([groups[1], groups[3], groups[5]])
     if groups[8] != '':
         phoneNum += ' x' + groups[8]
