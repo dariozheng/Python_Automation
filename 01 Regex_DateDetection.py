@@ -16,11 +16,11 @@ def check(day, month, year):
     month = int(month)
     day = int(day)
     year = int(year)
-    if month in [4,7,9,11]: 
+    if month in [4,6,9,11]: 
         if day <= 30:
             matches.append(groups[0])
     elif month == 2:
-        if year % 4 == 0 | year % 100 == 0 and not year % 400 == 0: # Find the leap year 
+        if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):  
             if day <= 29:
                 matches.append(groups[0])
         else:
