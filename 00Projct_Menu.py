@@ -1,5 +1,5 @@
 #! Python 3
-# Using PyInputPlus by Al Sweigart al@inventwithpython.com
+# Using PyInputPlus by Al Sweigart al@inventwithpython.com, take the orders from a menu
 
 import pyinputplus as pyip
 totalCents = 0
