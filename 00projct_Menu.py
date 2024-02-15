@@ -2,6 +2,7 @@
 # Using PyInputPlus by Al Sweigart al@inventwithpython.com 
 
 import pyinputplus as pyip
+import copy
 totalCents = 0
 totalDollars = 0
 x = 0
@@ -40,7 +41,8 @@ def totalprice():
 # Remember each order 
 def getOrder(order):
     global orderlist
-    orderlist.append(order)
+    tmp = copy.deepcopy(order)
+    orderlist.append(tmp)
 # Display each order with their price using nested list and dictionary technique
 def displayOrder():
     global orderlist, prices 
