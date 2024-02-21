@@ -1,4 +1,4 @@
-#! python 3
+#! python3
 # Using PyInputPlus by Al Sweigart al@inventwithpython.com, a simple multiplication quiz
 
 import pyinputplus as pyip 
