@@ -1,4 +1,4 @@
-#! Python 3
+#! python3
 # Using PyInputPlus by Al Sweigart al@inventwithpython.com 
 
 import pyinputplus as pyip
