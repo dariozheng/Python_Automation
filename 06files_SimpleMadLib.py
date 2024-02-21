@@ -1,4 +1,4 @@
-#! Python3
+#! python3
 # A Mad Libs program that reads in text files and lets the user add their own text anywhere the word ADJECTIVE, NOUN, ADVERB, or VERB appears in the text file
 from pathlib import Path
 import re
