@@ -1,5 +1,5 @@
 #! python3
-# This is a program that opens all .txt files in a folder and searches for any line that matches a user-supplied regular expression. The results is printed to the screen.
+# This is a program that opens all .txt files in a folder and searches for any line that matches a user-supplied regular expression. The results is printed to the screen and saved in a txt.
 
 from pathlib import Path
 import re, os
