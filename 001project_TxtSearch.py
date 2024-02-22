@@ -5,8 +5,9 @@ from pathlib import Path
 import re, os
 
 homeDir = Path.home()
+print('\nFolders: \n')
 for files in os.listdir(homeDir):
-    print(files +'\n')
+    print('- '+files, end='\n')
 
 folder = input('What is the folder? \nPlease input a folder from the home directory:\n')
 path = Path(homeDir/folder)
