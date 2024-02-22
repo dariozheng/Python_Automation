@@ -21,5 +21,6 @@ for file in path.glob('*.txt'):
             if lineRegex.search(line):
                 print(f'File: {file.name}, Line: {lineNumber}, Match: {line.strip()}')
         numberFiles += 1
+    f.close()
 
 print(f'\nWe have found {numberFiles} txt files. \n')
