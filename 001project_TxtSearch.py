@@ -19,7 +19,7 @@ for file in path.glob('*.txt'):
     with open(file) as f:
         for lineNumber, line in enumerate(f, 1):
             if lineRegex.search(line):
-                print(f'File: {file.name}, Line: {lineNumber}, Match: {line.strip()} \n')
+                print(f'File: {file.name}, Line: {lineNumber}, Match: {line.strip()}')
         numberFiles += 1
     f.close()
 
