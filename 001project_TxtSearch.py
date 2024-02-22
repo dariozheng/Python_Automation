@@ -4,13 +4,26 @@
 from pathlib import Path
 import re, os
 
-homeDir = Path.home()
-print('\nFolders: \n')
-for files in os.listdir(homeDir):
-    print('- '+files, end='\n')
+#save the result in a txt file in the home dir
+def saveOnFile():
+    listOfLines = open(Path(homeDir/'listOfLines.txt'), 'a')
+    listOfLines.write(f'File: {file.name}, Line: {lineNumber}, Match: {line.strip()} \n')
+    listOfLines.close()
+#print the folder in the home directory 
+def homeDir():
+    print('\nFolders: \n')
+    for files in os.listdir(Path.home()):
+        print('- '+files, end='\n')
+    return Path.home()
+#choose a folder among those in the homedir
+def chooseFolder():
+    folder = ''
+    while folder == '':
+        folder = input('What is the folder? \nPlease input a folder from the home directory:\n')
+    return Path(homeDir/folder)
 
-folder = input('What is the folder? \nPlease input a folder from the home directory:\n')
-path = Path(homeDir/folder)
+homeDir = homeDir()
+path = chooseFolder()
 
 lineRegex = re.compile(input('What line do you want to find?:\n'))
 numberFiles = 0
@@ -20,6 +33,7 @@ for file in path.glob('*.txt'):
         for lineNumber, line in enumerate(f, 1):
             if lineRegex.search(line):
                 print(f'File: {file.name}, Line: {lineNumber}, Match: {line.strip()}')
+                saveOnFile()
         numberFiles += 1
     f.close()
 
